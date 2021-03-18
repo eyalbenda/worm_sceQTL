@@ -46,7 +46,7 @@ require(Biostrings)
 #### Load gene annotation
 geneAnnotsCur = readRDS("study_data//geneAnnotationMatrix.rds.gz")
 #### Load global monocle object
-cdsFinBC = readRDS("study_data/backgroundCorrectedMonocle3_V4.rds")
+cdsFinBC = readRDS("study_data/backgroundCorrectedMonocle3_V5.rds")
 
 
 #### Load eQTL results

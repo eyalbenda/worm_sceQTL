@@ -21,8 +21,8 @@ plotGenos = function(chr,barcode)
     }
     pl = ggplot(plotDFAll,aes(x=position,y=hmm)) + 
       geom_line() + 
-      geom_segment(data=plotDFAll %>% filter(ref>0),aes(xend=position,x=position,y=hmm,color=as.factor(ref),yend=hmm-0.1)) +
-      geom_segment(data=plotDFAll %>% filter(alt>0),aes(xend=position,x=position,y=hmm,color=as.factor(alt),yend=hmm+0.1)) + 
+      geom_segment(data=plotDFAll %>% filter(ref>0),aes(xend=position,x=position,y=hmm-0.01,color=as.factor(ref),yend=hmm-0.1)) +
+      geom_segment(data=plotDFAll %>% filter(alt>0),aes(xend=position,x=position,y=hmm+0.01,color=as.factor(alt),yend=hmm+0.1)) + 
       ylim(c(-0.03,1.03)) + 
       theme_classic() + 
       geom_hline(yintercept=0.5,linetype=3) +  
